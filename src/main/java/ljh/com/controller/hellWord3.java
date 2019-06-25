@@ -17,7 +17,7 @@ public class hellWord3 {
     @RequestMapping("/{id}")
     public String view(@PathVariable("id") Long id) {
        
-        return "hellword";
+        return "hellword1111";
     }
 
     public static void main(String[] args) {
