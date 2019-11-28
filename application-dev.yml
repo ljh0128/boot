@@ -1,13 +1,6 @@
-server:
-  port: 8888
+# 数据源
 spring:
-  application:
-    name: provider
-eureka:
-  client:
-    service-url:
-      # 集群注册中心
-      defaultZone: http://127.0.0.1:9090/eureka/
-  instance:
-    prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+   datasource:
+         url: jdbc:mysql://120.26.57.145:18306/zljc?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+         username: zljc
+         password: zljc.daydayup.com.cn
