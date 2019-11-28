@@ -1,2 +1,13 @@
 server:
-  port: 9999
+  port: 8888
+spring:
+  application:
+    name: provider
+eureka:
+  client:
+    service-url:
+      # 集群注册中心
+      defaultZone: http://127.0.0.1:9090/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
